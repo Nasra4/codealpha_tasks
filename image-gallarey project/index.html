@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="A responsive image gallery with category filters and a lightbox viewer.">
+
+    <title>Beautiful Moments | Image Gallery</title>
+
+    <link rel="stylesheet" href="style.css">
+
+
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+
+    <header class="site-header">
+        <a class="brand" href="#" aria-label="My Gallery home">
+            <span class="brand-icon" aria-hidden="true">▣</span>
+            <span>My Gallery</span>
+        </a>
+
+        <span class="header-note">
+            A collection of beautiful moments
+        </span>
+    </header>
+
+    <main class="container">
+
+        <section class="intro">
+            <p class="eyebrow">PHOTO COLLECTION</p>
+
+            <h1>Beautiful Moments</h1>
+
+            <span class="title-rule" aria-hidden="true"></span>
+
+            <p class="intro-copy">
+                Explore the collection. Select any image to see it in full size.
+            </p>
+        </section>
+
+        <nav class="filters" aria-label="Filter gallery by category">
+
+            <button
+                class="filter active"
+                type="button"
+                data-category="All"
+                aria-pressed="true">
+                All Photos
+            </button>
+
+            <button
+                class="filter"
+                type="button"
+                data-category="Nature"
+                aria-pressed="false">
+                Nature
+            </button>
+
+            <button
+                class="filter"
+                type="button"
+                data-category="City"
+                aria-pressed="false">
+                City
+            </button>
+
+            <button
+                class="filter"
+                type="button"
+                data-category="Flowers"
+                aria-pressed="false">
+                Flowers
+            </button>
+
+            <button
+                class="filter"
+                type="button"
+                data-category="Travel"
+                aria-pressed="false">
+                Travel
+            </button>
+
+        </nav>
+
+        <p class="results-count" id="results-count" aria-live="polite"></p>
+
+        <section
+            class="gallery"
+            id="gallery"
+            aria-label="Photo gallery">
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <p>
+            My Gallery
+            <span aria-hidden="true">·</span>
+            Created with HTML, CSS &amp; JavaScript
+        </p>
+    </footer>
+
+    <div
+        class="lightbox"
+        id="lightbox"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Image viewer"
+        aria-hidden="true">
+
+        <button
+            class="close-button"
+            id="close"
+            type="button"
+            aria-label="Close image viewer">
+            ×
+        </button>
+
+        <button
+            class="nav-button previous"
+            id="prev"
+            type="button"
+            aria-label="Previous image">
+            ‹
+        </button>
+
+        <div class="viewer">
+
+            <div class="viewer-image-wrap">
+                <img id="lightbox-img" src="" alt="">
+            </div>
+
+            <div class="viewer-details">
+
+                <div>
+                    <h2 id="caption-title"></h2>
+                    <p id="caption-category"></p>
+                </div>
+
+                <span
+                    class="counter"
+                    id="counter"
+                    aria-live="polite">
+                </span>
+
+            </div>
+        </div>
+
+        <button
+            class="nav-button next"
+            id="next"
+            type="button"
+            aria-label="Next image">
+            ›
+        </button>
+
+    </div>
+
+</body>
+</html>
