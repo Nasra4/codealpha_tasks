@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="theme-color" content="#103c30">
+  <title>Qur'an Player | Recitation</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="quran-player">
+
+    <header class="header">
+      <div class="brand">
+        <div class="brand-icon">☪</div>
+        <div>
+          <h1>Qur'an Player</h1>
+          <p>A moment of peace</p>
+        </div>
+      </div>
+      <span class="live-label">
+        <span class="live-dot"></span>
+        RECITATION
+      </span>
+    </header>
+
+    <section class="now-playing">
+
+      <div class="ornament">۞</div>
+
+      <div class="cover-frame">
+        <img
+          id="cover"
+          src="images/shiekh.jpg"
+          alt="Qur'an reciter"
+        >
+      </div>
+
+      <p class="section-label">NOW RECITING</p>
+
+      <h2 id="surah-title">Surah Al-Ikhlas</h2>
+      <p id="reciter">Sheikh Abdirashid Sheikh Ali Sufi</p>
+
+      <audio id="audio" preload="metadata"></audio>
+
+      <div class="progress-section">
+        <input
+          type="range"
+          id="progress"
+          min="0"
+          max="100"
+          value="0"
+          step="0.1"
+          aria-label="Recitation progress"
+        >
+
+        <div class="time-labels">
+          <span id="current-time">0:00</span>
+          <span id="duration">0:00</span>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button
+          id="prev"
+          class="control-button"
+          aria-label="Previous surah"
+          title="Previous surah"
+        >|◀</button>
+
+        <button
+          id="play"
+          class="play-button"
+          aria-label="Play recitation"
+          title="Play"
+        >▶</button>
+
+        <button
+          id="next"
+          class="control-button"
+          aria-label="Next surah"
+          title="Next surah"
+        >▶|</button>
+      </div>
+
+      <div class="volume-section">
+        <span aria-hidden="true">◖</span>
+        <input
+          type="range"
+          id="volume"
+          min="0"
+          max="1"
+          step="0.01"
+          value="0.7"
+          aria-label="Volume"
+        >
+        <span aria-hidden="true">◗</span>
+      </div>
+
+      <label class="autoplay-option">
+        <input type="checkbox" id="autoplay" checked>
+        <span>Continue to next surah automatically</span>
+      </label>
+
+      <p id="status" class="status" role="status">
+        Select a surah to begin listening.
+      </p>
+
+    </section>
+
+    <section class="surah-section">
+      <div class="section-heading">
+        <div>
+          <p class="section-label">YOUR COLLECTION</p>
+          <h2>Surah List</h2>
+        </div>
+
+        <span id="surah-count" class="count-badge">0 Surahs</span>
+      </div>
+
+      <div id="surah-list" class="surah-list"></div>
+    </section>
+
+    <footer class="footer">
+      <span>۞</span>
+      <p>Listen, reflect, and find peace.</p>
+      <span>۞</span>
+    </footer>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
