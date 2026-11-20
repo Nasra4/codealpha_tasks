@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Gallery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <a href="#" class="logo">📷 My Gallery</a>
+    <span>Beautiful Moments</span>
+  </header>
+
+  <main class="container">
+    <section class="intro">
+      <h1>Beautiful Moments</h1>
+      <p>Explore my collection of photos. Click any image to view it in full size.</p>
+    </section>
+
+    <nav class="filters" aria-label="Filter images">
+      <button class="filter active" data-category="All">All</button>
+      <button class="filter" data-category="Nature">Nature</button>
+      <button class="filter" data-category="City">City</button>
+      <button class="filter" data-category="Flowers">Flowers</button>
+      <button class="filter" data-category="Travel">Travel</button>
+    </nav>
+
+    <section class="gallery" id="gallery"></section>
+  </main>
+
+  <div class="lightbox" id="lightbox"
+       role="dialog" aria-modal="true"
+       aria-label="Image viewer" aria-hidden="true">
+    <button class="close" id="close" aria-label="Close">×</button>
+    <button class="nav-btn prev" id="prev" aria-label="Previous image">❮</button>
+
+    <div class="viewer">
+      <img id="lightbox-img" src="" alt="">
+      <div class="caption">
+        <h2 id="caption-title"></h2>
+        <p id="caption-category"></p>
+        <span id="counter"></span>
+      </div>
+    </div>
+
+    <button class="nav-btn next" id="next" aria-label="Next image">❯</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
